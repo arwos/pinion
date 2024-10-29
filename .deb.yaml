@@ -1,0 +1,27 @@
+package: pinion
+source: pinion
+version: 1:0.1.0
+architecture:
+  - amd64
+  - arm64
+maintainer: The OSSPkg Team <github@osspkg.com>
+homepage: https://osspkg.com/
+description:
+  - Reverse proxy
+section: utils
+priority: optional
+control:
+  depends:
+    - systemd
+    - ca-certificates
+  build: devtool build --arch=%arch%
+  conffiles:
+    - /etc/pinion/config.yaml
+  preinst: scripts/preinst.sh
+  postinst: scripts/postinst.sh
+  prerm: scripts/prerm.sh
+  postrm: scripts/postrm.sh
+data:
+  bin/pinion: build/pinion_%arch%
+  etc/pinion/config.yaml: config/config.yaml
+  etc/systemd/system/pinion.service: init/pinion.service

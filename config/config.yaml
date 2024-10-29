@@ -1,0 +1,27 @@
+env: prod
+log:
+  format: syslog
+  level: 4
+
+server:
+  http-server: 0.0.0.0:55555
+  auth-require: true
+
+dns:
+  - 1.1.1.1
+  - 8.8.8.8
+
+auth:
+  - login: user
+    passwd: passwd
+
+reverse:
+  - address: 1.1.1.1:1234
+    login: user
+    passwd: passwd
+    tag: rp1
+
+domains:
+  - tag: rp1
+    domain:
+      - 'example.com'
