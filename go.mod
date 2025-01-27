@@ -3,7 +3,7 @@ module go.arwos.org/pinion
 go 1.22.5
 
 require (
-	github.com/miekg/dns v1.1.62
+	github.com/miekg/dns v1.1.63
 	go.osspkg.com/do v0.1.2
 	go.osspkg.com/errors v0.3.1
 	go.osspkg.com/goppy/v2 v2.1.5
@@ -23,9 +23,9 @@ require (
 	go.osspkg.com/syncing v0.3.0 // indirect
 	go.osspkg.com/xc v0.3.1 // indirect
 	golang.org/x/mod v0.21.0 // indirect
-	golang.org/x/net v0.27.0 // indirect
+	golang.org/x/net v0.31.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
-	golang.org/x/sys v0.26.0 // indirect
+	golang.org/x/sys v0.27.0 // indirect
 	golang.org/x/tools v0.22.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
