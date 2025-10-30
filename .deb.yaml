@@ -1,6 +1,6 @@
 package: pinion
 source: pinion
-version: 1:0.1.0
+version: git
 architecture:
   - amd64
   - arm64
@@ -14,7 +14,7 @@ control:
   depends:
     - systemd
     - ca-certificates
-  build: devtool build --arch=%arch%
+  build: goppy build --arch=%arch%
   conffiles:
     - /etc/pinion/config.yaml
   preinst: scripts/preinst.sh

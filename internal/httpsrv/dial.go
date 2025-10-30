@@ -11,11 +11,12 @@ import (
 	"net/http"
 
 	"github.com/miekg/dns"
-	"go.arwos.org/pinion/internal/config"
 	"go.osspkg.com/do"
 	"go.osspkg.com/errors"
 	"go.osspkg.com/goppy/v2/xdns"
 	"go.osspkg.com/logx"
+
+	"go.arwos.org/pinion/internal/config"
 )
 
 type Dial struct {
@@ -62,7 +63,8 @@ func (v *Dial) resolve(host, port string) (*net.TCPAddr, error) {
 		break
 	}
 
-	if len(ip) == 0 ||
+	if ip == nil ||
+		len(ip) == 0 ||
 		ip.IsLoopback() ||
 		ip.IsPrivate() ||
 		ip.IsUnspecified() ||

@@ -6,8 +6,9 @@
 package main
 
 import (
-	"go.arwos.org/pinion/internal"
 	"go.osspkg.com/goppy/v2"
+
+	"go.arwos.org/pinion/internal"
 )
 
 func main() {

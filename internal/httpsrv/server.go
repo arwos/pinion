@@ -10,10 +10,11 @@ import (
 	"fmt"
 	"net"
 
-	"go.arwos.org/pinion/internal/config"
 	"go.osspkg.com/do"
 	"go.osspkg.com/errors"
 	"go.osspkg.com/logx"
+
+	"go.arwos.org/pinion/internal/config"
 )
 
 type Server struct {

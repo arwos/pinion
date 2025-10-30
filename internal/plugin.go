@@ -6,13 +6,14 @@
 package internal
 
 import (
+	"go.osspkg.com/goppy/v2/plugins"
+
 	"go.arwos.org/pinion/internal/config"
 	"go.arwos.org/pinion/internal/httpsrv"
-	"go.osspkg.com/goppy/v2/plugins"
 )
 
-var Plugin = plugins.Plugins{
-	plugins.Plugin{
+var Plugin = plugins.Kinds{
+	plugins.Kind{
 		Config: &config.Config{},
 		Inject: httpsrv.New,
 	},

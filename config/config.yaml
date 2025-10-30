@@ -9,17 +9,17 @@ server:
 
 dns:
   - 1.1.1.1
-  - 8.8.8.8
+  - 1.0.0.1
 
 auth:
   - login: user
     passwd: passwd
 
 reverse:
-  - address: 1.1.1.1:1234
+  - tag: rp1
+    address: 1.1.1.1:1234
     login: user
     passwd: passwd
-    tag: rp1
 
 domains:
   - tag: rp1
